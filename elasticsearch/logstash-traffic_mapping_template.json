@@ -1,0 +1,252 @@
+{
+  "template" : "logstash-traffic*",
+  "mappings": {
+    "traffic-court": {
+      "properties": {
+        "Agency": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "AmountDue": {
+          "type": "float",
+          "doc_values": true
+        },
+        "AmountPaid": {
+          "type": "float",
+          "doc_values": true
+        },
+        "CitationNumber": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "ClosingDisposition": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "DOB": {
+          "type": "date",
+          "format": "M/d/yyyy",
+          "doc_values": true
+        },
+        "DefCity": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "DefFullName": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "DefState": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "DefZip": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "DefendantFirstName": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "DefendantLastName": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "DispoDate": {
+          "type": "date",
+          "format": "M/d/yyyy"
+        },
+        "FiledDate": {
+          "type": "date",
+          "format": "M/d/yyyy"
+        },
+        "HearingDate": {
+          "type": "date",
+          "format": "M/d/yyyy"
+        },
+        "HearingTime": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "IssueDate": {
+          "type": "date",
+          "format": "M/d/yyyy",
+          "doc_values": true
+        },
+        "JudgeAdmin": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "Location": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "OwnerCity": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "OwnerFirstName": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "OwnerLastName": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "OwnerState": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed"
+        },
+        "OwnerZip": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "Sex": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "ViolationCode": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "ViolationTitle": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "index": "not_analyzed",
+          "doc_values": true
+        },
+        "geoip": {
+          "dynamic": "true",
+          "properties": {
+            "location": {
+              "type": "geo_point"
+            }
+          }
+        },
+        "host": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed",
+              "ignore_above": 256
+            }
+          }
+        },
+        "message": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed",
+              "ignore_above": 256
+            }
+          }
+        },
+        "path": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed",
+              "ignore_above": 256
+            }
+          }
+        },
+        "type": {
+          "type": "string",
+          "norms": {
+            "enabled": false
+          },
+          "fields": {
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}
