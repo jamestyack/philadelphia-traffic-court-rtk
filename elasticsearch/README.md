@@ -21,7 +21,7 @@ curl -XPUT localhost:9200/_template/template_1 -d '
 <contents of logstash-traffic_mapping_template.json here>
 '
 ```
-* Update the logstash.conf file with appropriate path to the directory where the *.tsv files you want to index are located. Also, check that all the other settings are correct (e.g. cluster name, URIs etc for Elasticsearch)
+* Update the ```logstash.conf``` file with appropriate path to the directory where the *.tsv files you want to index are located. Also, check that all the other settings are correct (e.g. cluster name, URIs etc for Elasticsearch)
 * Run ```logstash -f <path_to>/logstash.conf```
 
 The files should index in the background. When you start up Kibana, point to the logstash-* index. Full Kibana docs online at https://www.elastic.co/products/kibana and explore the UI at http://localhost:5601
